@@ -1,4 +1,4 @@
-#Fundamentos de Arquitetura de Sistemas
+# Fundamentos de Arquitetura de Sistemas
 
 ## Web Services
 * São serviços que se comunicam geralmente pelo protocolo http utilizando alguma linguagem de marcação
@@ -54,3 +54,53 @@
 * 3xx = Redirecionamento
 * 4xx = Erro do cliente
 * 5xx = Erro do servidor
+
+## Tipos de arquitetura
+* ### Monolito:
+  * Em engenharia de software, uma aplicação monolítica descreve uma única aplicação de software em camadas no qual a interface de usuário e código de acesso aos dados são combinados em um único programa a partir de uma única plataforma.
+    Uma aplicação monolítica é autônoma e independente de outras aplicações de computação. A filosofia do projeto consiste em um aplicativo que não é responsável apenas por uma determinada tarefa, mas que também pode executar todos os passos necessários para completar uma determinada função.
+    Um aplicativo monolítico descreve uma aplicação de software que é projetado sem modularidade. A modularidade é desejável, em geral, uma vez que suporta a reutilização de partes da lógica da aplicação e também facilita a manutenção, permitindo o reparo ou substituição de peças da aplicação sem a necessidade de substituição por atacado.
+   #### Prós e Contras:
+   ##### Prós:
+*   Baixa Complexidade
+*   Monitoramento Simplificado
+   ##### Contras:
+*   Stack Única
+*   Compartilhamento de recursos
+*   Acoplamentos
+*   Mais complexo a escalabilidade
+* ### Microsserviços:
+* #### Microsserviço 1:
+* Os serviços estão diretamente acoplados e interagem entre si
+  ![Microsserviço 1](microsservico_1.png)
+* ##### Prós:
+* Stack dinâmica
+* Simples escalabilidade
+* ##### Contras:
+* Acoplamento
+* Monitoramento mais complexo
+* Provisionamento mais complexo
+* #### Microsserviço 2:
+* Serviços se comunicando por meio de message broker, os serviços não conversam entre sí diretamente.
+  ![Microsserviço 2](miscrosservico_2.png)
+* ##### Prós:
+* Stack dinâmica
+* Simples escalabilidade
+* Desacoplamento
+* ##### Contras:
+* Monitoramento mais complexo
+* Provisionamento mais complexo
+*  #### Microsserviço 3:
+* Microsserviço dependente de gerenciador de pipeline.
+  ![Microsserviço 3](microsservicos_3.png)
+* ##### Prós:
+* Stack dinâmica
+* Simples escalabilidade
+* Desacoplamento
+* Menor Complexidade
+* ##### Contras:
+* Plataforma dependente do gerenciador de pipeline
+* Provisionamento mais complexo
+## Comparativo entre arquiteturas
+
+# Gerenciamento de erros e volume de acesso
