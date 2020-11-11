@@ -1,5 +1,3 @@
-# Livro de Receitas :fork_and_knife:
+# Estudos BootCamp Everis Digital Inovation One
 ***
-### Olá, seja bem vindo ao meu curso de receitas
-* Strogonofe de frango
-* Pavê
+## Aqui serão postados anotações,exercícios e certificados referentes aos estudos realizados no bootcamp:
