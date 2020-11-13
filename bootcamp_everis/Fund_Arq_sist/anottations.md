@@ -1,4 +1,4 @@
-# Fundamentos de Arquitetura de Sistemas
+# Resumo Fundamentos de Arquitetura de Sistemas
 
 ## Web Services
 * São serviços que se comunicam geralmente pelo protocolo http utilizando alguma linguagem de marcação
@@ -101,6 +101,11 @@
 * ##### Contras:
 * Plataforma dependente do gerenciador de pipeline
 * Provisionamento mais complexo
-## Comparativo entre arquiteturas
-
-# Gerenciamento de erros e volume de acesso
+## Gerenciamento de erros e volume de acesso
+* #### Onde é mais complexo:
+* Processos assíncronos (Microsserviços 2)
+* Pipeline
+* #### Solução:
+* Dead letter queue
+* Filas de re-tentativas
+* 
