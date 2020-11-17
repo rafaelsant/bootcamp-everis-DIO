@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="input-group">
+            <div class="input-group-prepend mx-auto flex-column w-auto">
+                <h2 class="input-group-text">Valor da embalagem do produto em R$</h2>
+                <input class="form-control" id='porcao' type="text">
+                <br>
+                <h2 class="input-group-text w-auto p-3">Quantidade da embalagem em gramas</h2>
+                <input id='gramas' type="text" class="form-control">
+                <br>
+                <h2 class="input-group-text">Peso da porção em gramas</h2>
+                <input id='quilo' type="text" class="form-control">
+                <br>
+                <button type="submit" class="btn btn-primary" onclick="result()">Calcular</button>
+                <hr>
+                <h2 class="input-group-text">Valor final:</h2>
+                <h2 id="resultado"></h2>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const result = ()=>{
+        let porcao= document.getElementById("porcao").value;
+        let gramas = document.getElementById("gramas").value;
+        let quilo  =document.getElementById("quilo").value;
+        console.log(quilo,gramas, porcao);
+        let final = Number.parseFloat((quilo*porcao)/gramas);
+        console.log(final);
+        document.getElementById("resultado").innerHTML = final
+    }
+</script>
+</html>
