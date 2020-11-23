@@ -1,0 +1,148 @@
+function sum(...args){
+    return args.reduce((acc,value) => acc+value , 0);
+}
+
+undefined
+console.log(sum(5,5,5,2,3));
+VM627:1 20
+undefined
+//rest operator
+undefined
+//arrow functions não possuem arguments
+undefined
+const multiply = (...args) => args.reduce((acc,value)=>acc*value);
+undefined
+console.log(multiply(4,5,3,2,1,5))
+VM1011:1 600
+undefined
+const str = 'Digital Innovation One';
+undefined
+function logArgs(...args){
+    console.log(args);
+}
+undefined
+logArgs(...str)
+
+undefined
+//spread operator é usado na passagem de funções para espelhar strings,arrays e literals
+undefined
+//em objetos o spread só pode ser usado em sua construção não iteráveis
+//Um shallow clone é uma cópia do objeto original, mas que não teve as propriedades copiadas de forma correta, então sua mudança ainda pode interferir no objeto original.
+//Destructoring Assignment
+var [apple,banana,orange] = ["apple","banana","orange"];
+undefined
+console.log(banana)
+VM1989:1 banana
+undefined
+var arr = ["uva","banana","maçã"];
+undefined
+var [uva,banana,maca] = arr
+undefined
+console.log(uva)
+VM2190:1 uva
+undefined
+var obj = {
+    nome:'Rafael',
+    props:{
+        age:25
+    }
+};
+undefined
+var { props: {age}} = obj;
+undefined
+console.log(age)
+
+//symbol é um identificador único, independente de seu valor
+
+const name = Symbol('rafael')
+undefined
+name
+Symbol(rafael)
+//Symbol identificador único, pode ser passado um valor que serve apenas para debug
+undefined
+const name2 = Symbol('rafael')
+undefined
+console.log(name===name2)
+VM572:1 false
+undefined
+//pode ser usado para identificar propriedades privadas
+undefined
+const obj = (
+    [name]: 'rafael'
+);
+console.log(obj);
+VM793:2 Uncaught SyntaxError: Unexpected token ':'
+const obj = {
+    [name]: 'rafael'
+};
+console.log(obj);
+VM802:4 {Symbol(rafael): "rafael"}Symbol(rafael): "rafael"__proto__: Object
+undefined
+//não é totalmente privado pois existe um método que pode acessá-lo
+undefined
+Object.getOwnPropertySymbols
+ƒ getOwnPropertySymbols() { [native code] }
+Object.getOwnPropertySymbols(obj)
+[Symbol(rafael)]0: Symbol(rafael)length: 1__proto__: Array(0)
+//antes dos symbols para identificar um a propriedade privada se utilizava _ antes do nome das variáveis, ex: _id
+undefined
+//well known symbols sao funções que podem ser usados para adicionar propriedades ao objeto
+undefined
+Symbol.iterator
+Symbol(Symbol.iterator)
+Symbol.split
+Symbol(Symbol.split)
+Symbol.toString
+ƒ toString() { [native code] }
+Symbol.toStringTag
+Symbol(Symbol.toStringTag)
+Array.prototype
+[remove: ƒ, shuffle: ƒ, constructor: ƒ, concat: ƒ, copyWithin: ƒ, …]remove: ƒ ()shuffle: ƒ ()concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()Symbol(Symbol.iterator): ƒ values()Symbol(src)_1.vkul1pxjjb: "function values() { [native code] }"arguments: (...)caller: (...)length: 0name: "values"__proto__: ƒ ()[[Scopes]]: Scopes[0]Symbol(Symbol.unscopables): {copyWithin: true, entries: true, fill: true, find: true, findIndex: true, …}copyWithin: trueentries: truefill: truefind: truefindIndex: trueflat: trueflatMap: trueincludes: truekeys: truevalues: trueSymbol(values): ƒ ()__proto__: Object
+const arr =[1,2,3,4]
+undefined
+const it = arr[Symbol.iterator]();
+undefined
+console.log(it.next())
+VM1962:1 {value: 1, done: false}done: falsevalue: 1__proto__: Object
+undefined
+console.log(it.next())
+VM1968:1 {value: 2, done: false}
+undefined
+console.log(it.next())
+VM1973:1 {value: 3, done: false}
+undefined
+console.log(it.next())
+VM1978:1 {value: 4, done: false}
+undefined
+console.log(it.next())
+VM1983:1 {value: undefined, done: true}
+undefined
+for (let value of arr){
+    console.log(value)
+}
+undefined
+//Generators são funções com pausas
+function* hello(){
+console.log('Hello');
+yield;
+console.log('from');
+yield;
+console.log('Functional');
+}
+const gen1 = hello();
+undefined
+console.log(gen1.next());
+VM3104:2 Hello
+VM3129:1 {value: undefined, done: false}
+undefined
+console.log(gen1.next());
+VM3104:4 from
+VM3134:1 {value: undefined, done: false}
+undefined
+console.log(gen1.next());
+VM3104:6 Functional
+VM3139:1 {value: undefined, done: true}
+undefined
+console.log(gen1.next());
+VM3144:1 {value: undefined, done: true}
+undefined
