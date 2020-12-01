@@ -31,13 +31,14 @@ Agora a evolução das especificações e padrões do Java será feiro sob o nom
 	Void não é um tipo, ela indica que a função não retorna nada.
 ## Valores Default:
 
-Data Type|	Default Value (for fields)
-byte	|0
-short	|0
-int	|0
-long	|0L
-float	|0.0f
-double	|0.0d
-char	|'\u0000'
-String (or any object)|  	null
-boolean	|false
+|Data Type	|	Default Value (for fields)	|
+|--------------|--------------------------------------|
+|byte	  	|	0				|
+|short		|	0				|
+|int		|	0				|
+|long		|	0L				|
+|float		|	0.0f				|
+|double	|	0.0d				|
+|char		|	'\u0000'			|
+|String 	|  	null				|
+|boolean	|	false				|
