@@ -71,3 +71,11 @@ São Objetos que representam os primitivos.
 * abstract: Esse modificador não é aplicado nas variáveis, apenas em classes e métodos. Uma classe abstrata não pode ser instanciada. Se houver alguma declaração de um método com abstract, a classe também deve ser marcada com abstract.
 * static: É usado para a criação de uma variável que poderá ser acessada por todas as instâncias de objetos dessa classe como uma variável comum, ou seja, a variável criada será a mesma em todas as instâncias, a modificação ocorre em toas as demais. E nas declarações de métodos ajudam no acesso direto à classe, portanto não é necessário instanciar um objeto para acessar o método.
 * final: Quando é aplicado na classe, não pemite estender, nos métodos impede que o mesmo seja sobrescrito, e nos valores de variáveis não pode ser alterado depois que já tenha sido atribuido um valor.
+## Interfaces:
+* Métodos abstratos: Devem ser implementados por todos.Novos métodos quebram as implementações.
+* Métodos default: São herdados a  todos que implementam.Novos métodos não quebram as implementações.
+## Enums:
+* Basicamente são dicionários de dados imutáveis.
+* Não é permitido criar novas instâncias.
+* O costrutor é sempre declarado como private.
+* Por convenção, por serem objetos constantes e imutáveis (static final), os nomes são em MAIÚSCULO.
