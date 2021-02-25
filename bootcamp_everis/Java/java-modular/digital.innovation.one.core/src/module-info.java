@@ -1,0 +1,2 @@
+module digitalinnovationone.core {
+}

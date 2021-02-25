@@ -13,3 +13,7 @@
 - Um Effect pode ou não retornar uma action.
 - Effects usam fluxos de dasdos para rpover novas fontes de ações e reduzir o estado baseado em interações externas, por exemplo, requisições HTTP, mensagens de websockets e eventos baseados em tempo.
 
+## Selectors:
+- É uma função pura usada para obter partes do estado da store.
+- Um feature selector é responsável por pegar uma feature que está na raiz da store.
+
